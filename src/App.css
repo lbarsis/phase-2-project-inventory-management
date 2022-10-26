@@ -1,0 +1,32 @@
+* {
+  background: #ffffff;
+}
+
+.App {
+  text-align: center;
+}
+
+.navbar {
+  padding: 25px;
+  background: #8a1a1c;
+  text-align: center;
+}
+
+.navlink {
+  background: none;
+  padding: 25px 25px 25px 25px;
+  margin: 0px 5px 0px 5px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header {
+  margin: 25px 25px 25px 25px;
+  color: #8a1a1c;
+  font-family: "Arial Black", sans-serif;
+  font-size: 4.5em;
+  letter-spacing: -1.5px;
+}
