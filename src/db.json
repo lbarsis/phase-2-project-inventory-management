@@ -1,0 +1,51 @@
+{
+  "categories": ["Bracket", "Sheet Metal", "Misc", "Hardware"],
+
+  "items": [
+    {
+      "id": 1,
+      "category": "Bracket",
+      "name": "343Z Bracket",
+      "vendor": "KSP",
+      "description": "Standard bracket for rim strike and closer",
+      "status": "In Stock",
+      "flagAmount": 50,
+      "onHand": 55,
+      "uom": "EA",
+      "flagged": false
+    },
+    {
+      "id": 2,
+      "name": "",
+      "vendor": "KSP",
+      "description": "Standard bracket for rim strike and closer",
+      "status": "In Stock",
+      "flagAmount": 50,
+      "onHand": 55,
+      "uom": "EA",
+      "flagged": false
+    },
+    {
+      "id": 3,
+      "name": "343Z Bracket",
+      "vendor": "KSP",
+      "description": "Standard bracket for rim strike and closer",
+      "status": "In Stock",
+      "flagAmount": 50,
+      "onHand": 55,
+      "uom": "EA",
+      "flagged": false
+    },
+    {
+      "id": 4,
+      "name": "343Z Bracket",
+      "vendor": "KSP",
+      "description": "Standard bracket for rim strike and closer",
+      "status": "In Stock",
+      "flagAmount": 50,
+      "onHand": 55,
+      "uom": "EA",
+      "flagged": false
+    }
+  ]
+}

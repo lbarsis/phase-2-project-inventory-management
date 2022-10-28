@@ -5,8 +5,15 @@ import AddItem from './AddItem';
 import OnOrder from './OnOrder';
 import Inventory from './Inventory';
 import Home from './Home';
+import inventory from '../db.json';
 
 function App() {
+  const {categories, items} = inventory
+
+  console.log(categories)
+  console.log(items)
+  
+
   return (
     <>
       <NavBar />
