@@ -16,17 +16,19 @@
     },
     {
       "id": 2,
-      "name": "",
+      "category":"Sheet Metal",
+      "name": "48 x 96 Sheet Metal 16GA CRS",
       "vendor": "KSP",
-      "description": "Standard bracket for rim strike and closer",
+      "description": "16GA CRS Sheet Metal Used for Door and Frames",
       "status": "In Stock",
-      "flagAmount": 50,
-      "onHand": 55,
+      "flagAmount": 5,
+      "onHand": 4,
       "uom": "EA",
-      "flagged": false
+      "flagged": true
     },
     {
       "id": 3,
+      "category":"Bracket",
       "name": "343Z Bracket",
       "vendor": "KSP",
       "description": "Standard bracket for rim strike and closer",
@@ -38,6 +40,7 @@
     },
     {
       "id": 4,
+      "category":"Bracket",
       "name": "343Z Bracket",
       "vendor": "KSP",
       "description": "Standard bracket for rim strike and closer",

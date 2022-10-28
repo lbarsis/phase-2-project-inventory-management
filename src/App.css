@@ -30,3 +30,37 @@
   font-size: 4.5em;
   letter-spacing: -1.5px;
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+}
+
+.table-data, .table-header {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.edit-button {
+  border: none;
+  width: 25px;
+  padding: 10px 8px 10px 8px;
+}
+
+.edit-button:hover {
+  cursor: pointer;
+}
+
+.table-icons {
+  border: none;
+  width: 25px;
+  padding: 10px 8px 10px 8px;
+  text-align: center;
+}

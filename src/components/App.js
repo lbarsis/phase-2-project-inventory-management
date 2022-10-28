@@ -6,20 +6,25 @@ import OnOrder from './OnOrder';
 import Inventory from './Inventory';
 import Home from './Home';
 import inventory from '../db.json';
+import React, { useEffect, useState } from 'react';
 
 function App() {
   const {categories, items} = inventory
+  const [inventoryItems, setInventoryItems] = useState([])
 
-  console.log(categories)
-  console.log(items)
-  
+  useEffect(() =>{
+    fetch('http://localhost:3003/items')
+    .then(r => r.json())
+    .then(items => setInventoryItems(items))
+  },
+  [])
 
   return (
     <>
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/inventory' element={<Inventory />}/>
+        <Route path='/inventory' element={<Inventory items={inventoryItems}/>}/>
         <Route path='/add-item' element={<AddItem />}/>
         <Route path='/on-order' element={<OnOrder />}/>
       </Routes>
