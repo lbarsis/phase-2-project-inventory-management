@@ -12,7 +12,7 @@ function InventoryTable({ items, onNewItem, categories, onDeleteItem, onEditItem
 
   return (
     <>
-      <AddItemForm onNewItem={onNewItem} categories={categories} /><br />
+      {/* <AddItemForm onNewItem={onNewItem} categories={categories} /><br /> */}
       <table>
         <tbody>
           <tr>

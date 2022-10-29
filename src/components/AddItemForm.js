@@ -60,10 +60,6 @@ function AddItemForm({ onNewItem, categories }) {
 
   }
 
-  const displayCategories = categories.map(category => {
-    return <option key={category} value={category}>{category}</option>
-  })
-
   return (
     <form className="item-form" onSubmit={submitItem}>
       <label htmlFor="category">Category:</label><br />
@@ -73,7 +69,7 @@ function AddItemForm({ onNewItem, categories }) {
         value={formData.category}
         onChange={handleChange}
       >
-        {displayCategories}
+        {categories}
         <option value='new category'>Other</option>
       </select>
       <br />

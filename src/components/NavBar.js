@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function NavBar({ search, setSearch }) {
+function NavBar({ search, setSearch, categoryFilter, setCategoryFilter, categories }) {
   return <div className="navbar">
     <NavLink
       to="/"
@@ -15,12 +15,12 @@ function NavBar({ search, setSearch }) {
     >
       Inventory
     </NavLink>
-    {/* <NavLink
+    <NavLink
       to="/add-item"
       className='navlink'
     >
       Add Item
-    </NavLink> */}
+    </NavLink>
     <NavLink
       to="/on-order"
       className='navlink'
@@ -28,14 +28,23 @@ function NavBar({ search, setSearch }) {
       On Order
     </NavLink>
     <input
-      className="search-bar"
+      className="navbar-input"
       type="text"
       id="search"
       name="search"
-      placeholder="Search..."
+      placeholder="Search name..."
       value={search}
       onChange={e => setSearch(e.target.value)}
     />
+    <select className="navbar-input" type="text"
+      id="category"
+      name="category"
+      value={categoryFilter}
+      onChange={e => setCategoryFilter(e.target.value)}
+    >
+      <option value='all'>All</option>
+      {categories}
+    </select>
   </div>;
 }
 

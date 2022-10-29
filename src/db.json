@@ -8,13 +8,13 @@
   "items": [
     {
       "id": 3,
-      "category": "Bracket",
+      "category": "Sheet Metal",
       "name": "343Z Bracket",
-      "vendor": "KSP",
+      "vendor": "Krieger",
       "description": "Standard bracket for rim strike and closer",
-      "status": "In Stock",
+      "status": "On Order",
       "flagAmount": 50,
-      "onHand": "100",
+      "onHand": "75",
       "uom": "EA",
       "flagged": false
     },
@@ -43,7 +43,7 @@
       "id": 5
     },
     {
-      "category": "Lock",
+      "category": "Hardware",
       "name": "LKM10K",
       "vendor": "Lockmasters",
       "description": "2890C Life Safety Lock",
@@ -103,18 +103,6 @@
       "id": 10
     },
     {
-      "category": "Misc",
-      "name": "fadfd",
-      "vendor": "aaaaaa",
-      "description": "aaddfff",
-      "status": "In Stock",
-      "flagAmount": "15",
-      "onHand": "100",
-      "uom": "EA",
-      "flagged": false,
-      "id": 11
-    },
-    {
       "category": "Sheet Metal",
       "name": "inventory",
       "vendor": "KSP",
@@ -125,6 +113,18 @@
       "uom": "EA",
       "flagged": true,
       "id": 13
+    },
+    {
+      "category": "Bracket",
+      "name": "banana",
+      "vendor": "KSP",
+      "description": "2890C Life Safety Lock",
+      "status": "ssssss",
+      "flagAmount": "15",
+      "onHand": "20",
+      "uom": "EA",
+      "flagged": false,
+      "id": 14
     }
   ]
 }

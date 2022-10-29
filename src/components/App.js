@@ -38,22 +38,42 @@ function App() {
     setInventoryItems(displayItems)
   }
 
-  const searchedItems = inventoryItems.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+  const filteredItems = inventoryItems.filter(item => {
+    if (categoryFilter === 'all') {
+      return item
+    } else {
+      return item.category === categoryFilter
+    }
+  })
+
+  const searchedItems = filteredItems.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+
+  const displayCategories = categories.map(category => {
+    return <option key={category} value={category}>{category}</option>
+  })
 
   return (
     <>
-      <NavBar search={search} setSearch={setSearch}/>
+      <NavBar
+        search={search}
+        setSearch={setSearch}
+        categoryFilter={categoryFilter}
+        setCategoryFilter={setCategoryFilter}
+        categories={displayCategories}
+      />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/inventory' element={<Inventory
-          items={searchedItems}
-          onNewItem={handleAddNewItem}
-          onEditItem={handleUpdateItem}
-          categories={categories}
-          onDeleteItem={handleDeleteItem}
-        />}
+        <Route
+          path='/inventory'
+          element={<Inventory
+            items={searchedItems}
+            onNewItem={handleAddNewItem}
+            onEditItem={handleUpdateItem}
+            categories={categories}
+            onDeleteItem={handleDeleteItem}
+          />}
         />
-        <Route path='/add-item' element={<AddItem onNewItem={handleAddNewItem} categories={categories} />} />
+        <Route path='/add-item' element={<AddItem onNewItem={handleAddNewItem} categories={displayCategories} />} />
         <Route path='/on-order' element={<OnOrder />} />
       </Routes>
     </>

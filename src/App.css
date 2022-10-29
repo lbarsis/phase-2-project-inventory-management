@@ -112,9 +112,10 @@ label {
   background: none;
 }
 
-.search-bar {
-  width: 25%;
+.navbar-input {
+  width: 20%;
   padding: 5px 20px;
+  margin-right: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
