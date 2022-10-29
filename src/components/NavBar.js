@@ -27,6 +27,13 @@ function NavBar() {
     >
       On Order
     </NavLink>
+    <input
+      className="search-bar"
+      type="text"
+      id="search"
+      name="search"
+      placeholder="Search..."
+    />
   </div>;
 }
 
