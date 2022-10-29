@@ -168,14 +168,18 @@ function InventoryItem({ item, onDeleteItem, onEditItem, categories }) {
         <td className="table-data">{onHand}</td>
         <td className="table-data">{uom}</td>
         <td className="table-icons">
-          <tr>
-            <td><button className="edit-button">🚚</button></td>
-            <td><button className="edit-button" onClick={handleEdit} >✏️</button></td>
-          </tr>
-          <tr>
-            <td><button className="edit-button" onClick={deleteItem}>🗑️</button></td>
-            <td>{flagged ? "🚩" : null}</td>
-          </tr>
+          <table>
+            <tbody>
+              <tr>
+                <td><button className="edit-button">🚚</button></td>
+                <td><button className="edit-button" onClick={handleEdit} >✏️</button></td>
+              </tr>
+              <tr>
+                <td><button className="edit-button" onClick={deleteItem}>🗑️</button></td>
+                <td>{flagged ? "🚩" : null}</td>
+              </tr>
+            </tbody>
+          </table>
         </td>
       </tr>
     )

@@ -7,18 +7,6 @@
   ],
   "items": [
     {
-      "id": 2,
-      "category": "Misc",
-      "name": "Random Lock",
-      "vendor": "Lock Manufacturer",
-      "description": "Lock changed again",
-      "status": "Out of Stock",
-      "flagAmount": 5,
-      "onHand": "4",
-      "uom": "EA",
-      "flagged": true
-    },
-    {
       "id": 3,
       "category": "Bracket",
       "name": "343Z Bracket",
