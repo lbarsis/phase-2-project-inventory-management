@@ -16,6 +16,7 @@ function InventoryItem({ item }) {
       <td className="table-data">{uom}</td>
       <td className="table-icons">
         <button className="edit-button">✏️</button>
+        <button className="edit-button">🗑️</button>
         {flagged ? "🚩" : null}
       </td>
     </tr>
