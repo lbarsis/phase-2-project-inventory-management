@@ -7,26 +7,14 @@
   ],
   "items": [
     {
-      "id": 1,
-      "category": "Bracket",
-      "name": "343Z Bracket",
-      "vendor": "KSP",
-      "description": "Standard bracket for rim strike and closer",
-      "status": "In Stock",
-      "flagAmount": 50,
-      "onHand": 55,
-      "uom": "EA",
-      "flagged": false
-    },
-    {
       "id": 2,
-      "category": "Sheet Metal",
-      "name": "48 x 96 Sheet Metal 16GA CRS",
-      "vendor": "KSP",
-      "description": "16GA CRS Sheet Metal Used for Door and Frames",
-      "status": "In Stock",
+      "category": "Hardware",
+      "name": "Random Lock",
+      "vendor": "Lock Manufacturer",
+      "description": "Lock changed",
+      "status": "Out of Stock",
       "flagAmount": 5,
-      "onHand": 4,
+      "onHand": "0",
       "uom": "EA",
       "flagged": true
     },
@@ -79,7 +67,7 @@
       "id": 6
     },
     {
-      "category": "Lock",
+      "category": "Hardware",
       "name": "S&G 2890C",
       "vendor": "Sargent & Greenleaf",
       "description": "2890C Life Safety Lock",
@@ -101,6 +89,54 @@
       "uom": "EA",
       "flagged": false,
       "id": 8
+    },
+    {
+      "category": "Bracket",
+      "name": "dfda",
+      "vendor": "fadfd",
+      "description": "afdadfff",
+      "status": "ssssss",
+      "flagAmount": "15",
+      "onHand": "10",
+      "uom": "EA",
+      "flagged": true,
+      "id": 9
+    },
+    {
+      "category": "Sheet Metal",
+      "name": "fdafd",
+      "vendor": "fadfad",
+      "description": "afdadfdaf",
+      "status": "adfadf",
+      "flagAmount": "10",
+      "onHand": "15",
+      "uom": "EA",
+      "flagged": false,
+      "id": 10
+    },
+    {
+      "category": "Misc",
+      "name": "fadfd",
+      "vendor": "aaaaaa",
+      "description": "aaddfff",
+      "status": "In Stock",
+      "flagAmount": "15",
+      "onHand": "10",
+      "uom": "EA",
+      "flagged": true,
+      "id": 11
+    },
+    {
+      "category": "Sheet Metal",
+      "name": "inventory",
+      "vendor": "KSP",
+      "description": "Sentient, mechanized machine capable of destroying cities",
+      "status": "afdda",
+      "flagAmount": "15",
+      "onHand": "10",
+      "uom": "EA",
+      "flagged": true,
+      "id": 13
     }
   ]
 }

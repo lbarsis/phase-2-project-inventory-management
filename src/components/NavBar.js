@@ -15,12 +15,12 @@ function NavBar() {
     >
       Inventory
     </NavLink>
-    <NavLink
+    {/* <NavLink
       to="/add-item"
       className='navlink'
     >
       Add Item
-    </NavLink>
+    </NavLink> */}
     <NavLink
       to="/on-order"
       className='navlink'

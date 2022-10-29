@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-function AddItemForm({ onNewItem }) {
+function AddItemForm({ onNewItem, categories }) {
   const [formData, setFormData] = useState({
-    category: '',
+    category: 'Bracket',
     name: '',
     vendor: '',
     description: '',
@@ -42,12 +42,12 @@ function AddItemForm({ onNewItem }) {
       },
       body: JSON.stringify(newFormItem)
     })
-    .then(r => r.json())
-    .then(newItem => onNewItem(newItem))
+      .then(r => r.json())
+      .then(newItem => onNewItem(newItem))
 
 
     setFormData({
-      category: '',
+      category: 'Bracket',
       name: '',
       vendor: '',
       description: '',
@@ -60,15 +60,22 @@ function AddItemForm({ onNewItem }) {
 
   }
 
+  const displayCategories = categories.map(category => {
+    return <option key={category} value={category}>{category}</option>
+  })
+
   return (
     <form className="item-form" onSubmit={submitItem}>
       <label htmlFor="category">Category:</label><br />
-      <input className="form-input" type="text"
+      <select className="form-input" type="text"
         id="category"
         name="category"
         value={formData.category}
         onChange={handleChange}
-      />
+      >
+        {displayCategories}
+        <option value='new category'>Other</option>
+      </select>
       <br />
       <label htmlFor="name">Name: </label><br />
       <input

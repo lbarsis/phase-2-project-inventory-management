@@ -9,15 +9,15 @@ import inventory from '../db.json';
 import React, { useEffect, useState } from 'react';
 
 function App() {
-  const {categories, items} = inventory
+  const { categories, items } = inventory
   const [inventoryItems, setInventoryItems] = useState([])
 
-  useEffect(() =>{
+  useEffect(() => {
     fetch('http://localhost:3003/items')
-    .then(r => r.json())
-    .then(items => setInventoryItems(items))
+      .then(r => r.json())
+      .then(items => setInventoryItems(items))
   },
-  [])
+    [])
 
   function handleAddNewItem(newItem) {
     setInventoryItems([
@@ -26,14 +26,31 @@ function App() {
     ])
   }
 
+  function handleDeleteItem(deletedItem) {
+    const displayItems = inventoryItems.filter(item => item.id !== deletedItem.id)
+    setInventoryItems(displayItems)
+  }
+
+  function handleUpdateItem(updatedItem) {
+    const displayItems = inventoryItems.map(item => item.id === updatedItem.id ? updatedItem : item)
+    setInventoryItems(displayItems)
+  }
+
   return (
     <>
       <NavBar />
       <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/inventory' element={<Inventory items={inventoryItems} onNewItem={handleAddNewItem}/>}/>
-        <Route path='/add-item' element={<AddItem onNewItem={handleAddNewItem}/>}/>
-        <Route path='/on-order' element={<OnOrder />}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/inventory' element={<Inventory
+          items={inventoryItems}
+          onNewItem={handleAddNewItem}
+          onEditItem={handleUpdateItem}
+          categories={categories}
+          onDeleteItem={handleDeleteItem}
+        />}
+        />
+        <Route path='/add-item' element={<AddItem onNewItem={handleAddNewItem} categories={categories} />} />
+        <Route path='/on-order' element={<OnOrder />} />
       </Routes>
     </>
   );

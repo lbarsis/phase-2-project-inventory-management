@@ -2,17 +2,17 @@ import React from "react";
 import AddItemForm from "./AddItemForm";
 import InventoryItem from "./InventoryItem";
 
-function InventoryTable({ items, onNewItem }) {
+function InventoryTable({ items, onNewItem, categories, onDeleteItem, onEditItem }) {
 
   const displayItems = items.map(item => {
     return (
-      <InventoryItem key={item.id} item={item} />
+      <InventoryItem key={item.id} item={item} onDeleteItem={onDeleteItem} categories={categories} onEditItem={onEditItem}/>
     )
   })
 
   return (
     <>
-    <AddItemForm onNewItem={onNewItem}/><br/>
+    <AddItemForm onNewItem={onNewItem} categories={categories}/><br/>
       <table>
         <tbody>
         <tr>
