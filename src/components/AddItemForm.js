@@ -141,7 +141,7 @@ function AddItemForm({ onNewItem, categories }) {
         onChange={handleChange}
       />
       <br />
-      <input className="form-submit" type="submit" />
+      <input className="button" type="submit" />
     </form>
   )
 

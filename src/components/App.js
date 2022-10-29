@@ -12,7 +12,7 @@ function App() {
   const { categories, items } = inventory
   const [inventoryItems, setInventoryItems] = useState([])
   const [search, setSearch] = useState('')
-  const [categoryFilter, setCategoryFilter] = useState('All')
+  const [categoryFilter, setCategoryFilter] = useState('all')
 
   useEffect(() => {
     fetch('http://localhost:3003/items')
@@ -20,6 +20,27 @@ function App() {
       .then(items => setInventoryItems(items))
   },
     [])
+    console.log(inventoryItems)
+
+    function sortItems(e) {
+      const sortCategory = e.target.parentNode.textContent.toLowerCase().replace(' ∇', "")
+      inventoryItems.sort((a,b) => {
+        const sortA = a[sortCategory]
+        const sortB = b[sortCategory]
+  
+        if (sortA < sortB) {
+          return -1;
+        }
+        if (sortA > sortB) {
+          return 1;
+        }
+      
+        // names must be equal
+        return 0;
+      })
+      console.log(inventoryItems)
+      // setInventoryItems(inventoryItems)
+    }
 
   function handleAddNewItem(newItem) {
     setInventoryItems([
@@ -71,6 +92,7 @@ function App() {
             onEditItem={handleUpdateItem}
             categories={categories}
             onDeleteItem={handleDeleteItem}
+            onSortItems={sortItems}
           />}
         />
         <Route path='/add-item' element={<AddItem onNewItem={handleAddNewItem} categories={displayCategories} />} />

@@ -125,6 +125,30 @@
       "uom": "EA",
       "flagged": false,
       "id": 14
+    },
+    {
+      "category": "Bracket",
+      "name": "343Z",
+      "vendor": "KSP",
+      "description": "2890C Life Safety Lock",
+      "status": "In Stock",
+      "flagAmount": "15",
+      "onHand": "25",
+      "uom": "EA",
+      "flagged": false,
+      "id": 15
+    },
+    {
+      "category": "Misc",
+      "name": "banana",
+      "vendor": "Lock Manufacturer",
+      "description": "Sentient, mechanized machine capable of destroying cities",
+      "status": "Out of Stock",
+      "flagAmount": "10",
+      "onHand": 0,
+      "uom": "EA",
+      "flagged": true,
+      "id": 16
     }
   ]
 }

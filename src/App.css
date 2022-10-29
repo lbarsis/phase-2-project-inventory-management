@@ -35,7 +35,7 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 90%;
-  margin: auto;
+  margin: 0px auto 10px auto ;
 }
 
 .table-data, .table-header {
@@ -84,7 +84,7 @@ tr:nth-child(even) {
   box-sizing: border-box;
 }
 
-.form-submit {
+.button {
   width: 100%;
   background-color: #8a1a1c;
   color: white;
@@ -94,9 +94,10 @@ tr:nth-child(even) {
   border-radius: 4px;
   cursor: pointer;
   font-family: sans-serif;
+  
 }
 
-.form-submit:hover {
+.button:hover {
   background-color: #9c1d1f;
 }
 
@@ -120,4 +121,19 @@ label {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 15px;
+}
+
+#page-select {
+  max-width: 35%;
+  margin: 0px 25px 0px auto;
+}
+
+#next-page {
+  max-width: 35%;
+  margin: 0px 25px 0px auto;
+}
+
+#previous-page {
+  max-width: 35%;
+  margin: 0px 25px 15px auto;
 }
