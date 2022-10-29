@@ -11,7 +11,7 @@
       "category": "Misc",
       "name": "Random Lock",
       "vendor": "Lock Manufacturer",
-      "description": "Lock changed",
+      "description": "Lock changed again",
       "status": "Out of Stock",
       "flagAmount": 5,
       "onHand": "4",
@@ -26,7 +26,7 @@
       "description": "Standard bracket for rim strike and closer",
       "status": "In Stock",
       "flagAmount": 50,
-      "onHand": 55,
+      "onHand": "100",
       "uom": "EA",
       "flagged": false
     },
