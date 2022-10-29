@@ -1,7 +1,8 @@
 import React from "react";
+import AddItemForm from "./AddItemForm";
 import InventoryItem from "./InventoryItem";
 
-function InventoryTable({ items }) {
+function InventoryTable({ items, onNewItem }) {
 
   const displayItems = items.map(item => {
     return (
@@ -11,7 +12,9 @@ function InventoryTable({ items }) {
 
   return (
     <>
+    <AddItemForm onNewItem={onNewItem}/><br/>
       <table>
+        <tbody>
         <tr>
           <th>
           <button className="add-item-button">➕</button>
@@ -26,6 +29,7 @@ function InventoryTable({ items }) {
           <th className="table-header">uom</th>
         </tr>
         {displayItems}
+        </tbody>
       </table>
     </>
 

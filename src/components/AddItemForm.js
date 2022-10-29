@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddItemForm() {
+function AddItemForm({ onNewItem }) {
   const [formData, setFormData] = useState({
     category: '',
     name: '',
@@ -22,18 +22,55 @@ function AddItemForm() {
 
   function submitItem(e) {
     e.preventDefault()
+
+    const newFormItem = {
+      category: formData.category,
+      name: formData.name,
+      vendor: formData.vendor,
+      description: formData.description,
+      status: formData.status,
+      flagAmount: formData.flagAmount,
+      onHand: formData.onHand,
+      uom: formData.uom,
+      flagged: parseInt(formData.onHand) <= parseInt(formData.flagAmount) ? true : false
+    }
+
+    fetch('http://localhost:3003/items', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newFormItem)
+    })
+    .then(r => r.json())
+    .then(newItem => onNewItem(newItem))
+
+
+    setFormData({
+      category: '',
+      name: '',
+      vendor: '',
+      description: '',
+      status: '',
+      flagAmount: 0,
+      onHand: 0,
+      uom: '',
+      flagged: false
+    })
+
   }
 
   return (
-    <form className="item-form">
-      <label htmlFor="category">Category:</label>
+    <form className="item-form" onSubmit={submitItem}>
+      <label htmlFor="category">Category:</label><br />
       <input className="form-input" type="text"
         id="category"
         name="category"
         value={formData.category}
         onChange={handleChange}
       />
-      <label htmlFor="name">Name:</label>
+      <br />
+      <label htmlFor="name">Name: </label><br />
       <input
         className="form-input"
         type="text"

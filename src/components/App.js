@@ -19,13 +19,20 @@ function App() {
   },
   [])
 
+  function handleAddNewItem(newItem) {
+    setInventoryItems([
+      ...inventoryItems,
+      newItem
+    ])
+  }
+
   return (
     <>
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/inventory' element={<Inventory items={inventoryItems}/>}/>
-        <Route path='/add-item' element={<AddItem />}/>
+        <Route path='/inventory' element={<Inventory items={inventoryItems} onNewItem={handleAddNewItem}/>}/>
+        <Route path='/add-item' element={<AddItem onNewItem={handleAddNewItem}/>}/>
         <Route path='/on-order' element={<OnOrder />}/>
       </Routes>
     </>

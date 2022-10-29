@@ -1,6 +1,10 @@
 {
-  "categories": ["Bracket", "Sheet Metal", "Misc", "Hardware"],
-
+  "categories": [
+    "Bracket",
+    "Sheet Metal",
+    "Misc",
+    "Hardware"
+  ],
   "items": [
     {
       "id": 1,
@@ -16,7 +20,7 @@
     },
     {
       "id": 2,
-      "category":"Sheet Metal",
+      "category": "Sheet Metal",
       "name": "48 x 96 Sheet Metal 16GA CRS",
       "vendor": "KSP",
       "description": "16GA CRS Sheet Metal Used for Door and Frames",
@@ -28,7 +32,7 @@
     },
     {
       "id": 3,
-      "category":"Bracket",
+      "category": "Bracket",
       "name": "343Z Bracket",
       "vendor": "KSP",
       "description": "Standard bracket for rim strike and closer",
@@ -40,7 +44,7 @@
     },
     {
       "id": 4,
-      "category":"Bracket",
+      "category": "Bracket",
       "name": "343Z Bracket",
       "vendor": "KSP",
       "description": "Standard bracket for rim strike and closer",
@@ -49,6 +53,54 @@
       "onHand": 55,
       "uom": "EA",
       "flagged": false
+    },
+    {
+      "category": "Bracket",
+      "name": "320 Z Bracket",
+      "vendor": "KSP",
+      "description": "Bracket used for mounting coordinators",
+      "status": "In Stock",
+      "flagAmount": "25",
+      "onHand": "10",
+      "uom": "EA",
+      "flagged": true,
+      "id": 5
+    },
+    {
+      "category": "Lock",
+      "name": "LKM10K",
+      "vendor": "Lockmasters",
+      "description": "2890C Life Safety Lock",
+      "status": "In Stock",
+      "flagAmount": "10",
+      "onHand": "5",
+      "uom": "EA",
+      "flagged": true,
+      "id": 6
+    },
+    {
+      "category": "Lock",
+      "name": "S&G 2890C",
+      "vendor": "Sargent & Greenleaf",
+      "description": "2890C Life Safety Lock",
+      "status": "In Stock",
+      "flagAmount": "10",
+      "onHand": "5",
+      "uom": "EA",
+      "flagged": true,
+      "id": 7
+    },
+    {
+      "category": "Bracket",
+      "name": "450 L Bracket",
+      "vendor": "KSP",
+      "description": "Standard L Bracket for jamb depths less than 6 inches",
+      "status": "In Stock",
+      "flagAmount": "15",
+      "onHand": "25",
+      "uom": "EA",
+      "flagged": false,
+      "id": 8
     }
   ]
 }
