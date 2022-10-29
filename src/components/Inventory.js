@@ -1,12 +1,19 @@
 import React from "react";
 import InventoryTable from "./InventoryTable";
 
-function Inventory({ items, categories, onNewItem, onDeleteItem, onEditItem }) {
+function Inventory({ items, categories, onNewItem, onDeleteItem, onEditItem, searchedItems }) {
 
   return (
     <div>
       <h1 className="header">Inventory Page</h1>
-      <InventoryTable items={items} categories={categories} onDeleteItem={onDeleteItem} onNewItem={onNewItem} onEditItem={onEditItem}/>
+      <InventoryTable
+        items={items}
+        categories={categories}
+        onDeleteItem={onDeleteItem}
+        onNewItem={onNewItem}
+        onEditItem={onEditItem}
+        searchedItems={searchedItems}
+      />
     </div>
   )
 

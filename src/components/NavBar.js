@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ search, setSearch }) {
   return <div className="navbar">
     <NavLink
       to="/"
@@ -33,6 +33,8 @@ function NavBar() {
       id="search"
       name="search"
       placeholder="Search..."
+      value={search}
+      onChange={e => setSearch(e.target.value)}
     />
   </div>;
 }

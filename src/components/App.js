@@ -11,6 +11,8 @@ import React, { useEffect, useState } from 'react';
 function App() {
   const { categories, items } = inventory
   const [inventoryItems, setInventoryItems] = useState([])
+  const [search, setSearch] = useState('')
+  const [categoryFilter, setCategoryFilter] = useState('All')
 
   useEffect(() => {
     fetch('http://localhost:3003/items')
@@ -36,13 +38,15 @@ function App() {
     setInventoryItems(displayItems)
   }
 
+  const searchedItems = inventoryItems.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+
   return (
     <>
-      <NavBar />
+      <NavBar search={search} setSearch={setSearch}/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/inventory' element={<Inventory
-          items={inventoryItems}
+          items={searchedItems}
           onNewItem={handleAddNewItem}
           onEditItem={handleUpdateItem}
           categories={categories}
