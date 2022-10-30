@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function InventoryItem({ item, onDeleteItem, onEditItem, categories }) {
 
-  const { id, category, name, vendor, description,
+  const { category, name, vendor, description,
     status, flagAmount, onHand, uom, flagged } = item
 
   const [edit, setEdit] = useState(false)

@@ -2,6 +2,14 @@
   background: #ffffff;
 }
 
+p {
+  margin: 25px 25px 25px 25px;
+  color: #8a1a1c;
+  font-family: "Arial Black", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0px;
+}
+
 .App {
   text-align: center;
 }
@@ -31,6 +39,14 @@
   letter-spacing: -1.5px;
 }
 
+.subheader {
+  margin: 25px 25px 25px 25px;
+  color: #8a1a1c;
+  font-family: "Arial Black", sans-serif;
+  font-size: 2em;
+  letter-spacing: -1.5px;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -42,10 +58,6 @@ table {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
 }
 
 .edit-button {

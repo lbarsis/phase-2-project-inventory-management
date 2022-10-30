@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function AddItemForm({ onNewItem, categories }) {
   const [formData, setFormData] = useState({
     category: 'Bracket',
+    newCategory: '',
     name: '',
     vendor: '',
     description: '',
@@ -24,15 +25,15 @@ function AddItemForm({ onNewItem, categories }) {
     e.preventDefault()
 
     const newFormItem = {
-      category: formData.category,
+      category: formData.category === 'other' ? formData.newCategory : formData.category,
       name: formData.name,
       vendor: formData.vendor,
       description: formData.description,
       status: formData.status,
-      flagAmount: formData.flagAmount,
-      onHand: formData.onHand,
+      flagAmount: parseInt(formData.flagAmount),
+      onHand: parseInt(formData.onHand),
       uom: formData.uom,
-      flagged: parseInt(formData.onHand) <= parseInt(formData.flagAmount) ? true : false
+      flagged: formData.onHand <= formData.flagAmount ? true : false
     }
 
     fetch('http://localhost:3003/items', {
@@ -57,21 +58,32 @@ function AddItemForm({ onNewItem, categories }) {
       uom: '',
       flagged: false
     })
-
   }
 
   return (
     <form className="item-form" onSubmit={submitItem}>
       <label htmlFor="category">Category:</label><br />
-      <select className="form-input" type="text"
+      {formData.category === 'other' ? (
+        <input
+        className="form-input"
+        type="text"
+        id="newCategory"
+        name="newCategory"
+        value={formData.newCategory}
+        onChange={handleChange}
+      />
+      ) 
+      : 
+      (<select className="form-input" type="text"
         id="category"
         name="category"
         value={formData.category}
         onChange={handleChange}
       >
         {categories}
-        <option value='new category'>Other</option>
+        <option value='other'>Other</option>
       </select>
+      )}
       <br />
       <label htmlFor="name">Name: </label><br />
       <input

@@ -10,7 +10,7 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
   const { categories, items } = inventory
-  const [inventoryItems, setInventoryItems] = useState([])
+  const [inventoryItems, setInventoryItems] = useState(items)
   const [search, setSearch] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('all')
 

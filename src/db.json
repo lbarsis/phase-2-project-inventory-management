@@ -134,9 +134,9 @@
       "description": "2890C Life Safety Lock",
       "status": "In Stock",
       "flagAmount": "15",
-      "onHand": "25",
+      "onHand": "10",
       "uom": "EA",
-      "flagged": false,
+      "flagged": true,
       "id": 15
     },
     {
@@ -162,6 +162,30 @@
       "uom": "EA",
       "flagged": true,
       "id": 17
+    },
+    {
+      "category": "New Category",
+      "name": "Item 1",
+      "vendor": "Vendor 1",
+      "description": "New Item with new Category",
+      "status": "In Stock",
+      "flagAmount": 15,
+      "onHand": 25,
+      "uom": "EA",
+      "flagged": false,
+      "id": 18
+    },
+    {
+      "category": "New Category 2",
+      "name": "Name 2",
+      "vendor": "Vendor 2",
+      "description": "New Item with new Category 2",
+      "status": "On Order",
+      "flagAmount": 15,
+      "onHand": 10,
+      "uom": "Ea",
+      "flagged": true,
+      "id": 19
     }
   ]
 }

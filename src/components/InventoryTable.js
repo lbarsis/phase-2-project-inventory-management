@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AddItemForm from "./AddItemForm";
 import InventoryItem from "./InventoryItem";
 
 function InventoryTable({ items, onNewItem, categories, onDeleteItem, onEditItem, onSortItems }) {
@@ -29,8 +28,7 @@ function InventoryTable({ items, onNewItem, categories, onDeleteItem, onEditItem
     })
 
   return (
-    <>
-      {/* <AddItemForm onNewItem={onNewItem} categories={categories} /><br /> */}
+    <> 
       <table>
         <tbody>
           <tr>
