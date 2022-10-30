@@ -3,20 +3,21 @@
     "Bracket",
     "Sheet Metal",
     "Misc",
-    "Hardware"
+    "Hardware",
+    "Seal"
   ],
   "items": [
     {
       "id": 3,
-      "category": "Sheet Metal",
+      "category": "Bracket",
       "name": "343Z Bracket",
-      "vendor": "Krieger",
+      "vendor": "KSP",
       "description": "Standard bracket for rim strike and closer",
-      "status": "On Order",
+      "status": "Needs Re-Order",
       "flagAmount": 50,
-      "onHand": "75",
+      "onHand": "25",
       "uom": "EA",
-      "flagged": false
+      "flagged": true
     },
     {
       "id": 4,
@@ -149,6 +150,18 @@
       "uom": "EA",
       "flagged": true,
       "id": 16
+    },
+    {
+      "category": "Sheet Metal",
+      "name": "banana",
+      "vendor": "fadfd",
+      "description": "2890C Life Safety Lock",
+      "status": "In Stock",
+      "flagAmount": "100",
+      "onHand": "10",
+      "uom": "EA",
+      "flagged": true,
+      "id": 17
     }
   ]
 }

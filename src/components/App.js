@@ -20,27 +20,6 @@ function App() {
       .then(items => setInventoryItems(items))
   },
     [])
-    console.log(inventoryItems)
-
-    function sortItems(e) {
-      const sortCategory = e.target.parentNode.textContent.toLowerCase().replace(' ∇', "")
-      inventoryItems.sort((a,b) => {
-        const sortA = a[sortCategory]
-        const sortB = b[sortCategory]
-  
-        if (sortA < sortB) {
-          return -1;
-        }
-        if (sortA > sortB) {
-          return 1;
-        }
-      
-        // names must be equal
-        return 0;
-      })
-      console.log(inventoryItems)
-      // setInventoryItems(inventoryItems)
-    }
 
   function handleAddNewItem(newItem) {
     setInventoryItems([
@@ -72,6 +51,33 @@ function App() {
   const displayCategories = categories.map(category => {
     return <option key={category} value={category}>{category}</option>
   })
+
+  function sortItems(e) {
+    const sortCategory = e.target.parentNode.textContent.toLowerCase().replace(' ∇', "")
+
+    if (sortCategory === 'flag amount') {
+      const displayItems = [...inventoryItems].sort((a,b) => a.flagAmount - b.flagAmount)
+      setInventoryItems(displayItems)
+    } if(sortCategory === 'on hand'){
+      const displayItems = [...inventoryItems].sort((a,b) => a.onHand - b.onHand)
+      setInventoryItems(displayItems)
+    } else {
+      const displayItems = [...inventoryItems].sort((a,b) => {
+        const sortA = a[sortCategory]
+        const sortB = b[sortCategory]
+  
+        if (sortA < sortB) {
+          return -1;
+        }
+        if (sortA > sortB) {
+          return 1;
+        }
+        return 0;
+      })
+      setInventoryItems(displayItems)
+    }
+  }
+
 
   return (
     <>

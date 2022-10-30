@@ -50,23 +50,23 @@ function InventoryTable({ items, onNewItem, categories, onDeleteItem, onEditItem
               <button className="edit-button" onClick={onSortItems}> ∇</button>
             </th>
             <th className="table-header">
-              description
+              Description
               <button className="edit-button" onClick={onSortItems}> ∇</button>
             </th>
             <th className="table-header">
-              status
+              Status
               <button className="edit-button" onClick={onSortItems}> ∇</button>
             </th>
             <th className="table-header">
-              flagAmount
+              Flag Amount
               <button className="edit-button" onClick={onSortItems}> ∇</button>
             </th>
             <th className="table-header">
-              onHand
+              On Hand
               <button className="edit-button" onClick={onSortItems}> ∇</button>
             </th>
             <th className="table-header">
-              uom
+              UOM
               <button className="edit-button" onClick={onSortItems}> ∇</button>
             </th>
           </tr>
