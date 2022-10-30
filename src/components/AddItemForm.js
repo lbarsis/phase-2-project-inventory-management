@@ -40,7 +40,7 @@ function AddItemForm({ onNewItem, categories }) {
       fetch('http://localhost:3003/categories', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({category: formData.newCategory})
+        body: JSON.stringify({ category: formData.newCategory })
       })
     }
 
@@ -57,6 +57,7 @@ function AddItemForm({ onNewItem, categories }) {
 
     setFormData({
       category: 'Bracket',
+      newCategory: '',
       name: '',
       vendor: '',
       description: '',
@@ -67,33 +68,6 @@ function AddItemForm({ onNewItem, categories }) {
       flagged: false
     })
   }
-
-  // function HandleNewCategory() {
-  //   if (formData.category === 'other') {
-  //     return (
-  //       <input
-  //         className="form-input"
-  //         type="text"
-  //         id="newCategory"
-  //         name="newCategory"
-  //         value={formData.newCategory}
-  //         onChange={handleChange}
-  //       />
-  //     )
-  //   } else {
-  //     return (
-  //       <select className="form-input" type="text"
-  //         id="category"
-  //         name="category"
-  //         value={formData.category}
-  //         onChange={handleChange}
-  //       >
-  //         {categories}
-  //         <option value='other'>Other</option>
-  //       </select>
-  //     )
-  //   }
-  // }
 
   return (
     <form className="item-form" onSubmit={submitItem}>

@@ -19,26 +19,6 @@
     {
       "id": 5,
       "category": "Seal"
-    },
-    {
-      "category": "New Category",
-      "id": 6
-    },
-    {
-      "category": "New Category 2",
-      "id": 7
-    },
-    {
-      "category": "dd",
-      "id": 8
-    },
-    {
-      "category": "dd",
-      "id": 9
-    },
-    {
-      "category": "ddddddddddd",
-      "id": 10
     }
   ],
   "items": [
@@ -425,6 +405,174 @@
       "uom": "",
       "flagged": true,
       "id": 36
+    },
+    {
+      "category": "New Category 3",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 37
+    },
+    {
+      "category": "New Category 4",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 38
+    },
+    {
+      "category": "New Category 5",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 39
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 40
+    },
+    {
+      "category": "New Category 8",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 41
+    },
+    {
+      "category": "ddddddddddd",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 42
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 43
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 44
+    },
+    {
+      "category": "dsds",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 45
+    },
+    {
+      "category": "d",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 46
+    },
+    {
+      "category": "ddddfadf",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 47
+    },
+    {
+      "category": "fadfads",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 48
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 49
+    },
+    {
+      "category": "New Category 3",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 50
     }
   ]
 }
