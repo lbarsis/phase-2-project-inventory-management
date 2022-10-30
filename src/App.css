@@ -89,7 +89,7 @@ tr:nth-child(even) {
   background-color: #8a1a1c;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 8px 5px;
   border: none;
   border-radius: 4px;
   cursor: pointer;

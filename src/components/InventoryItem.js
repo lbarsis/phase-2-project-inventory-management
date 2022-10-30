@@ -151,7 +151,7 @@ function InventoryItem({ item, onDeleteItem, onEditItem, categories }) {
           />
         </td>
         <td className="table-icons">
-          <button className="edit-button" onClick={editItem}>Save</button>
+          <button className="button" onClick={editItem}>Save</button>
         </td>
       </tr>
     )

@@ -56,16 +56,16 @@ function App() {
     const sortCategory = e.target.parentNode.textContent.toLowerCase().replace(' ∇', "")
 
     if (sortCategory === 'flag amount') {
-      const displayItems = [...inventoryItems].sort((a,b) => a.flagAmount - b.flagAmount)
+      const displayItems = [...inventoryItems].sort((a, b) => a.flagAmount - b.flagAmount)
       setInventoryItems(displayItems)
-    } if(sortCategory === 'on hand'){
-      const displayItems = [...inventoryItems].sort((a,b) => a.onHand - b.onHand)
+    } if (sortCategory === 'on hand') {
+      const displayItems = [...inventoryItems].sort((a, b) => a.onHand - b.onHand)
       setInventoryItems(displayItems)
     } else {
-      const displayItems = [...inventoryItems].sort((a,b) => {
+      const displayItems = [...inventoryItems].sort((a, b) => {
         const sortA = a[sortCategory]
         const sortB = b[sortCategory]
-  
+
         if (sortA < sortB) {
           return -1;
         }
@@ -92,7 +92,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route
           path='/inventory'
-          element={<Inventory
+          element=
+          {<Inventory
             items={searchedItems}
             onNewItem={handleAddNewItem}
             onEditItem={handleUpdateItem}
@@ -102,7 +103,13 @@ function App() {
           />}
         />
         <Route path='/add-item' element={<AddItem onNewItem={handleAddNewItem} categories={displayCategories} />} />
-        <Route path='/on-order' element={<OnOrder />} />
+        <Route path='/on-order' element={<OnOrder
+          items={searchedItems}
+          onNewItem={handleAddNewItem}
+          onEditItem={handleUpdateItem}
+          categories={categories}
+          onDeleteItem={handleDeleteItem}
+          onSortItems={sortItems} />} />
       </Routes>
     </>
   );

@@ -13,7 +13,7 @@
       "name": "343Z Bracket",
       "vendor": "KSP",
       "description": "Standard bracket for rim strike and closer",
-      "status": "Needs Re-Order",
+      "status": "On order",
       "flagAmount": 50,
       "onHand": "25",
       "uom": "EA",
@@ -27,9 +27,9 @@
       "description": "Standard bracket for rim strike and closer",
       "status": "In Stock",
       "flagAmount": 50,
-      "onHand": 55,
+      "onHand": "25",
       "uom": "EA",
-      "flagged": false
+      "flagged": true
     },
     {
       "category": "Bracket",
@@ -38,7 +38,7 @@
       "description": "Bracket used for mounting coordinators",
       "status": "In Stock",
       "flagAmount": "25",
-      "onHand": "10",
+      "onHand": "24",
       "uom": "EA",
       "flagged": true,
       "id": 5
@@ -50,9 +50,9 @@
       "description": "2890C Life Safety Lock",
       "status": "In Stock",
       "flagAmount": "10",
-      "onHand": "5",
+      "onHand": "15",
       "uom": "EA",
-      "flagged": true,
+      "flagged": false,
       "id": 6
     },
     {
@@ -146,9 +146,9 @@
       "description": "Sentient, mechanized machine capable of destroying cities",
       "status": "Out of Stock",
       "flagAmount": "10",
-      "onHand": 0,
+      "onHand": "15",
       "uom": "EA",
-      "flagged": true,
+      "flagged": false,
       "id": 16
     },
     {
