@@ -36,6 +36,14 @@ function AddItemForm({ onNewItem, categories }) {
       flagged: formData.onHand <= formData.flagAmount ? true : false
     }
 
+    if (formData.category === 'other') {
+      fetch('http://localhost:3003/categories', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({category: formData.newCategory})
+      })
+    }
+
     fetch('http://localhost:3003/items', {
       method: 'POST',
       headers: {
@@ -60,29 +68,55 @@ function AddItemForm({ onNewItem, categories }) {
     })
   }
 
+  // function HandleNewCategory() {
+  //   if (formData.category === 'other') {
+  //     return (
+  //       <input
+  //         className="form-input"
+  //         type="text"
+  //         id="newCategory"
+  //         name="newCategory"
+  //         value={formData.newCategory}
+  //         onChange={handleChange}
+  //       />
+  //     )
+  //   } else {
+  //     return (
+  //       <select className="form-input" type="text"
+  //         id="category"
+  //         name="category"
+  //         value={formData.category}
+  //         onChange={handleChange}
+  //       >
+  //         {categories}
+  //         <option value='other'>Other</option>
+  //       </select>
+  //     )
+  //   }
+  // }
+
   return (
     <form className="item-form" onSubmit={submitItem}>
       <label htmlFor="category">Category:</label><br />
       {formData.category === 'other' ? (
         <input
-        className="form-input"
-        type="text"
-        id="newCategory"
-        name="newCategory"
-        value={formData.newCategory}
-        onChange={handleChange}
-      />
-      ) 
-      : 
-      (<select className="form-input" type="text"
-        id="category"
-        name="category"
-        value={formData.category}
-        onChange={handleChange}
-      >
-        {categories}
-        <option value='other'>Other</option>
-      </select>
+          className="form-input"
+          type="text"
+          id="newCategory"
+          name="newCategory"
+          value={formData.newCategory}
+          onChange={handleChange}
+        />
+      ) : (
+        <select className="form-input" type="text"
+          id="category"
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        >
+          {categories}
+          <option value='other'>Other</option>
+        </select>
       )}
       <br />
       <label htmlFor="name">Name: </label><br />

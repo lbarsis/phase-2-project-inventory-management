@@ -1,10 +1,45 @@
 {
   "categories": [
-    "Bracket",
-    "Sheet Metal",
-    "Misc",
-    "Hardware",
-    "Seal"
+    {
+      "id": 1,
+      "category": "Bracket"
+    },
+    {
+      "id": 2,
+      "category": "Sheet Metal"
+    },
+    {
+      "id": 3,
+      "category": "Misc"
+    },
+    {
+      "id": 4,
+      "category": "Hardware"
+    },
+    {
+      "id": 5,
+      "category": "Seal"
+    },
+    {
+      "category": "New Category",
+      "id": 6
+    },
+    {
+      "category": "New Category 2",
+      "id": 7
+    },
+    {
+      "category": "dd",
+      "id": 8
+    },
+    {
+      "category": "dd",
+      "id": 9
+    },
+    {
+      "category": "ddddddddddd",
+      "id": 10
+    }
   ],
   "items": [
     {
@@ -186,6 +221,210 @@
       "uom": "Ea",
       "flagged": true,
       "id": 19
+    },
+    {
+      "category": "New Category",
+      "name": "banana",
+      "vendor": "Lockmasters",
+      "description": "2890C Life Safety Lock",
+      "status": "In Stock",
+      "flagAmount": 15,
+      "onHand": 25,
+      "uom": "EA",
+      "flagged": false,
+      "id": 20
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 21
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 22
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 23
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 24
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 25
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 26
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 27
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 28
+    },
+    {
+      "category": "New Category",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 29
+    },
+    {
+      "category": "dd",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 30
+    },
+    {
+      "category": "dd",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 31
+    },
+    {
+      "category": "dd",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 32
+    },
+    {
+      "category": "Bracket",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 33
+    },
+    {
+      "category": "Bracket",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 34
+    },
+    {
+      "category": "dd",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 35
+    },
+    {
+      "category": "ddddddddddd",
+      "name": "",
+      "vendor": "",
+      "description": "",
+      "status": "",
+      "flagAmount": 0,
+      "onHand": 0,
+      "uom": "",
+      "flagged": true,
+      "id": 36
     }
   ]
 }

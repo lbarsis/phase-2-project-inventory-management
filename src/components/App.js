@@ -49,7 +49,7 @@ function App() {
   const searchedItems = filteredItems.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
 
   const displayCategories = categories.map(category => {
-    return <option key={category} value={category}>{category}</option>
+    return <option key={category.id} value={category.category}>{category.category}</option>
   })
 
   function sortItems(e) {
