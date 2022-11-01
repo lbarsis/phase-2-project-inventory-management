@@ -18,10 +18,6 @@ function InventoryItem({ item, onDeleteItem, onEditItem, categories }) {
     flagged: flagged
   })
 
-  const displayCategories = categories.map(category => {
-    return <option key={category} value={category}>{category}</option>
-  })
-
   function handleChange(e) {
     setEditForm({
       ...editForm,
@@ -78,7 +74,7 @@ function InventoryItem({ item, onDeleteItem, onEditItem, categories }) {
             value={editForm.category}
             onChange={handleChange}
           >
-            {displayCategories}
+            {categories}
           </select>
         </td>
         <td className="table-data">

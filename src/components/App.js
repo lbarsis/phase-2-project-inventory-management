@@ -97,7 +97,7 @@ function App() {
             items={searchedItems}
             onNewItem={handleAddNewItem}
             onEditItem={handleUpdateItem}
-            categories={categories}
+            categories={displayCategories}
             onDeleteItem={handleDeleteItem}
             onSortItems={sortItems}
           />}
@@ -107,7 +107,7 @@ function App() {
           items={searchedItems}
           onNewItem={handleAddNewItem}
           onEditItem={handleUpdateItem}
-          categories={categories}
+          categories={displayCategories}
           onDeleteItem={handleDeleteItem}
           onSortItems={sortItems} />} />
       </Routes>
