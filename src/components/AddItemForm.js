@@ -33,7 +33,7 @@ function AddItemForm({ onNewItem, categories }) {
       flagAmount: parseInt(formData.flagAmount),
       onHand: parseInt(formData.onHand),
       uom: formData.uom,
-      flagged: formData.onHand <= formData.flagAmount ? true : false
+      flagged: parseInt(formData.onHand) <= parseInt(formData.flagAmount) ? true : false
     }
 
     if (formData.category === 'other') {

@@ -12,18 +12,19 @@ function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortIte
       setItemIndex(itemIndex => [itemIndex[0] + 5, itemIndex[1] + 5])
       previousPage.disabled = false
       if (itemIndex[1] + 5 >= items.length) {
-        nextPage.disabled = true
-      }
+       return nextPage.disabled = true
+      } 
 
     } else if (e.target.textContent === 'Previous Page') {
       setItemIndex(itemIndex => [itemIndex[0] - 5, itemIndex[1] - 5])
       nextPage.disabled = false
       if (itemIndex[0]- 5 <= 0) {
-        previousPage.disabled = true
+        return previousPage.disabled = true
       }
-
     }
   }
+
+  
 
   const displayItems = items.filter(item => (items.indexOf(item) >= itemIndex[0]) && (items.indexOf(item) <= itemIndex[1]))
     .map(item => {
@@ -77,7 +78,7 @@ function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortIte
         </tbody>
       </table>
       <div id="page-select">
-        <button className="button" id="previous-page" onClick={handlePage} >Previous Page</button>
+        <button className="button" id="previous-page" onClick={handlePage}>Previous Page</button>
         <button className="button" id="next-page" onClick={handlePage}>Next Page</button>
       </div>
     </>

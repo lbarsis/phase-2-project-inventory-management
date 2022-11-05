@@ -5,122 +5,50 @@
       "category": "Bracket"
     },
     {
-      "id": 2,
-      "category": "Sheet Metal"
+      "category": "Sheet Metal",
+      "id": 2
     },
     {
-      "id": 3,
-      "category": "Misc"
-    },
-    {
-      "id": 4,
-      "category": "Hardware"
-    },
-    {
-      "id": 5,
-      "category": "Seal"
-    },
-    {
-      "category": "Door Bottom Channel",
-      "id": 6
-    },
-    {
-      "category": "A",
-      "id": 7
-    },
-    {
-      "category": "B",
-      "id": 8
-    },
-    {
-      "category": "C",
-      "id": 9
+      "category": "Locksets",
+      "id": 3
     }
   ],
   "items": [
     {
       "category": "Bracket",
-      "name": "c",
-      "vendor": "b",
-      "description": "a",
-      "status": "c",
-      "flagAmount": 1,
-      "onHand": 3,
-      "uom": "b",
-      "flagged": false,
+      "name": "343Z Bracket",
+      "vendor": "KSP",
+      "description": "Standard bracket for mounting rim strikes and closers.",
+      "status": "In Stock",
+      "flagAmount": 15,
+      "onHand": 10,
+      "uom": "EA",
+      "flagged": true,
       "id": 1
     },
     {
-      "category": "A",
-      "name": "a",
-      "vendor": "b",
-      "description": "c",
-      "status": "c",
-      "flagAmount": 3,
-      "onHand": 2,
-      "uom": "a",
-      "flagged": true,
+      "category": "Sheet Metal",
+      "name": "16GA CRS  96\" x 48\"",
+      "vendor": "Sheet Metal Vendor",
+      "description": "Standard sheet metal used for doors on wide side.",
+      "status": "In Stock",
+      "flagAmount": 10,
+      "onHand": 11,
+      "uom": "EA",
+      "flagged": false,
       "id": 2
     },
     {
-      "category": "Sheet Metal",
-      "name": "b",
-      "vendor": "b",
-      "description": "c",
-      "status": "a",
-      "flagAmount": 2,
-      "onHand": 1,
-      "uom": "d",
-      "flagged": true,
-      "id": 3
-    },
-    {
-      "category": "Misc",
-      "name": "c",
-      "vendor": "b",
-      "description": "a",
-      "status": "d",
-      "flagAmount": 3,
-      "onHand": 3,
-      "uom": "c",
-      "flagged": true,
-      "id": 4
-    },
-    {
-      "category": "Seal",
-      "name": "bd",
-      "vendor": "a",
-      "description": "c",
-      "status": "b",
-      "flagAmount": 1,
-      "onHand": 2,
-      "uom": "d",
+      "category": "Locksets",
+      "name": "LKM10K with X-10 Dial",
+      "vendor": "Lockmasters",
+      "description": "Government 2890C Life Safety Device for SCIF Applications",
+      "status": "On Order",
+      "flagAmount": 15,
+      "onHand": 25,
+      "uom": "EA",
       "flagged": false,
-      "id": 5
-    },
-    {
-      "category": "C",
-      "name": "c",
-      "vendor": "c",
-      "description": "c",
-      "status": "c",
-      "flagAmount": 0,
-      "onHand": 0,
-      "uom": "c",
-      "flagged": true,
-      "id": 6
-    },
-    {
-      "category": "Hardware",
-      "name": "c",
-      "vendor": "c",
-      "description": "c",
-      "status": "c",
-      "flagAmount": 0,
-      "onHand": 0,
-      "uom": "c",
-      "flagged": true,
-      "id": 7
+      "id": 3
     }
   ]
 }
