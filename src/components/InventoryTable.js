@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 import InventoryItem from "./InventoryItem";
 
-function InventoryTable({ items, onNewItem, categories, onDeleteItem, onEditItem, onSortItems }) {
+function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortItems }) {
   const [itemIndex, setItemIndex] = useState([0, 4])
 
   function handlePage(e) {
+    const nextPage = document.querySelector('#next-page')
+    const previousPage = document.querySelector('#previous-page')
+
     if (e.target.textContent === 'Next Page') {
-      if (itemIndex[1] >= items.length) {
-        setItemIndex([0, 4])
-      } else {
-        setItemIndex(itemIndex => [itemIndex[0] + 5, itemIndex[1] + 5])
+      setItemIndex(itemIndex => [itemIndex[0] + 5, itemIndex[1] + 5])
+      previousPage.disabled = false
+      if (itemIndex[1] + 5 >= items.length) {
+        nextPage.disabled = true
       }
+
     } else if (e.target.textContent === 'Previous Page') {
-      if (itemIndex[0] <= 0) {
-        setItemIndex([items.length - 5, items.length])
-      } else {
-        setItemIndex(itemIndex => [itemIndex[0] - 5, itemIndex[1] - 5])
+      setItemIndex(itemIndex => [itemIndex[0] - 5, itemIndex[1] - 5])
+      nextPage.disabled = false
+      if (itemIndex[0]- 5 <= 0) {
+        previousPage.disabled = true
       }
+
     }
   }
 
@@ -28,12 +33,12 @@ function InventoryTable({ items, onNewItem, categories, onDeleteItem, onEditItem
     })
 
   return (
-    <> 
+    <>
       <table>
         <tbody>
           <tr>
             <th>
-              <button className="add-item-button">➕</button>
+              <button className="add-item-button"></button>
             </th>
             <th className="table-header">
               Category
@@ -72,7 +77,7 @@ function InventoryTable({ items, onNewItem, categories, onDeleteItem, onEditItem
         </tbody>
       </table>
       <div id="page-select">
-        <button className="button" id="previous-page" onClick={handlePage}>Previous Page</button>
+        <button className="button" id="previous-page" onClick={handlePage} >Previous Page</button>
         <button className="button" id="next-page" onClick={handlePage}>Next Page</button>
       </div>
     </>

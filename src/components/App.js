@@ -58,7 +58,7 @@ function App() {
     if (sortCategory === 'flag amount') {
       const displayItems = [...inventoryItems].sort((a, b) => a.flagAmount - b.flagAmount)
       setInventoryItems(displayItems)
-    } if (sortCategory === 'on hand') {
+    } else if (sortCategory === 'on hand') {
       const displayItems = [...inventoryItems].sort((a, b) => a.onHand - b.onHand)
       setInventoryItems(displayItems)
     } else {
@@ -69,9 +69,11 @@ function App() {
         if (sortA < sortB) {
           return -1;
         }
+        
         if (sortA > sortB) {
           return 1;
         }
+        
         return 0;
       })
       setInventoryItems(displayItems)

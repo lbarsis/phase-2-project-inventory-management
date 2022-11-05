@@ -44,8 +44,8 @@ function InventoryItem({ item, onDeleteItem, onEditItem, categories }) {
       vendor: editForm.vendor,
       description: editForm.description,
       status: editForm.status,
-      flagAmount: editForm.flagAmount,
-      onHand: editForm.onHand,
+      flagAmount: parseInt(editForm.flagAmount),
+      onHand: parseInt(editForm.onHand),
       uom: editForm.uom,
       flagged: parseInt(editForm.onHand) <= parseInt(editForm.flagAmount) ? true : false
     }
@@ -167,12 +167,11 @@ function InventoryItem({ item, onDeleteItem, onEditItem, categories }) {
           <table>
             <tbody>
               <tr>
-                <td><button className="edit-button">🚚</button></td>
                 <td><button className="edit-button" onClick={handleEdit} >✏️</button></td>
+                <td>{flagged ? "🚩" : null}</td>
               </tr>
               <tr>
                 <td><button className="edit-button" onClick={deleteItem}>🗑️</button></td>
-                <td>{flagged ? "🚩" : null}</td>
               </tr>
             </tbody>
           </table>

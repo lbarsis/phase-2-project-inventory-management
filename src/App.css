@@ -113,6 +113,10 @@ table {
   background-color: #9c1d1f;
 }
 
+.button:disabled {
+  background: lightgray;
+}
+
 .item-form {
   border-radius: 5px;
   background-color: #f2f2f2;
