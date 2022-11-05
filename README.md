@@ -41,7 +41,7 @@ Going directly to the Inventory page will only show you a header because no item
 ### Category
 The Category input is the set or group that an item can belong to. For example, if you were inventorying cars and wanted to group them by manufacturer, you could select Ford for all ford models or Toyota for all Toyota models. When the application is initially opened there will not be any categories to choose from. This is because the user is responsible for creating their own categories based on specific needs. 
 
-To add a category to the list, simply select 'Other' from the drop down menu. A new field will appear that will allow an input to be typed. Type any string into this field and continue to the 'Name' field.
+To add a category to the list, simply select 'Other' from the drop down menu. A new field will appear that will allow an input to be typed. Type any string into this field and continue to the 'Name' field. *As of right now, there is no way to delete a category once it has been added except through modifying the db.json file*
 
 After all the fields are input and the item is submitted, this category will be available from the drop down menu.
 
@@ -66,7 +66,7 @@ The On Hand amount is the current stock available for a specific item.
 ### UoM (Unit of Measure)
 Unit of measure is the way an item is counted. String can be counted in linear feet or 'LF', pens will most likely be counted in boxes or 'BOX' and larger items could potentially be listed as each or 'EA'.
 
-### Examples
+## Examples
 
 
 ## License
