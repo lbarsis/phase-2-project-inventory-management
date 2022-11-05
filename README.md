@@ -11,16 +11,24 @@ Additionally, there is also a search bar and a filter category bar. These two ut
 ```
 git@github.com:lbarsis/phase-2-project-inventory-management.git
 ```
-
 2. **Open up the terminal and clone the repository into the desired directory using:**
 ```
 git clone git@github.com:lbarsis/phase-1-project-joke-generator.git
 ```
-![git-clone](./images/git-clone.gif)
 
-3. **Run application using:** 
+3. **Install npm** 
 ```
-`explorer.exe index.html`
+npm install
+```
+
+4. **Start db.json Server** 
+```
+npm run server
+```
+
+5. **Run application using:** 
+```
+npm start
 ```
 
 ### Mini Header
