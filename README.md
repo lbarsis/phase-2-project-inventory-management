@@ -67,7 +67,7 @@ The On Hand amount is the current stock available for a specific item.
 Unit of measure is the way an item is counted. String can be counted in linear feet or 'LF', pens will most likely be counted in boxes or 'BOX' and larger items could potentially be listed as each or 'EA'.
 
 ## Examples
-
+![Example](./images/video1765546443.gif)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

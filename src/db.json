@@ -11,6 +11,18 @@
     {
       "category": "Locksets",
       "id": 3
+    },
+    {
+      "category": "Seal",
+      "id": 4
+    },
+    {
+      "category": "New Category",
+      "id": 5
+    },
+    {
+      "category": "New Category 2",
+      "id": 6
     }
   ],
   "items": [
@@ -49,6 +61,42 @@
       "uom": "EA",
       "flagged": false,
       "id": 3
+    },
+    {
+      "category": "Locksets",
+      "name": "S&G 2890C",
+      "vendor": "Sargent & Greenleaf",
+      "description": "2890C Life Safety Lock",
+      "status": "Out of Stock",
+      "flagAmount": 10,
+      "onHand": 0,
+      "uom": "EA",
+      "flagged": true,
+      "id": 4
+    },
+    {
+      "category": "Bracket",
+      "name": "320Z Coordinator Bracket",
+      "vendor": "KSP",
+      "description": "Standard bracket for mounting coordinators",
+      "status": "In Stock",
+      "flagAmount": 15,
+      "onHand": 20,
+      "uom": "EA",
+      "flagged": false,
+      "id": 5
+    },
+    {
+      "category": "New Category 2",
+      "name": "NC-3 Neoprene",
+      "vendor": "Seal Vendor",
+      "description": "Standard Seal for acoustic doors and frames",
+      "status": "In Stock",
+      "flagAmount": 1000,
+      "onHand": 2500,
+      "uom": "LF",
+      "flagged": false,
+      "id": 6
     }
   ]
 }
