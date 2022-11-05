@@ -58,15 +58,19 @@ Description is used to explain what the item is and how it is used in specific a
 Status is used to denote the current state the item is in. Example: if an item is fully stocked, the user could write 'In Stock' in the field. If the item is low or out, 'Out of Stock' could be input, or 'On Order' if the item has already been ordered. 
 
 ### Flag Amount
+The Flag Amount is the point at which the application should notify you that the quantity of stock is at it's lowest point. If you always need to have 5 of an specific item and the storage drops to 5 or lower, then the item will be flagged for reorder.
+
+### On Hand
+The On Hand amount is the current stock available for a specific item.
+
+### UoM (Unit of Measure)
+Unit of measure is the way an item is counted. String can be counted in linear feet or 'LF', pens will most likely be counted in boxes or 'BOX' and larger items could potentially be listed as each or 'EA'.
+
+### Examples
 
 
-    "category": "Bracket",
-    "name": "c",
-    "vendor": "b",
-    "description": "a",
-    "status": "c",
-    "flagAmount": 1,
-    "onHand": 3,
-    "uom": "b",
-    "flagged": false,
-    "id": 1
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
