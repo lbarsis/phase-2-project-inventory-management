@@ -31,4 +31,42 @@ npm run server
 npm start
 ```
 
-### Mini Header
+## Usage
+1. **Navigate to the hompage**
+Here will be a brief description on how the application can be used. It is recommended this page is reviewed prior to starting. The descriptions of each page here will give a summary of how they can be used together.
+
+2. **Navigate to the Add Item page**
+Going directly to the Inventory page will only show you a header because no items have been added at the start of the application. The Add Item page allows users to add items and get their inventory started. This page consists of a single form with eight input fields: Category, Name, Vendor, Description, Status, Flag Amount, On Hand, Unit of Measure.
+
+### Category
+The Category input is the set or group that an item can belong to. For example, if you were inventorying cars and wanted to group them by manufacturer, you could select Ford for all ford models or Toyota for all Toyota models. When the application is initially opened there will not be any categories to choose from. This is because the user is responsible for creating their own categories based on specific needs. 
+
+To add a category to the list, simply select 'Other' from the drop down menu. A new field will appear that will allow an input to be typed. Type any string into this field and continue to the 'Name' field.
+
+After all the fields are input and the item is submitted, this category will be available from the drop down menu.
+
+### Name
+The name of the item.
+
+### Vendor
+Vendor is the location or manufacturer that the item is purchased from.
+
+### Description
+Description is used to explain what the item is and how it is used in specific applications.
+
+### Status
+Status is used to denote the current state the item is in. Example: if an item is fully stocked, the user could write 'In Stock' in the field. If the item is low or out, 'Out of Stock' could be input, or 'On Order' if the item has already been ordered. 
+
+### Flag Amount
+
+
+    "category": "Bracket",
+    "name": "c",
+    "vendor": "b",
+    "description": "a",
+    "status": "c",
+    "flagAmount": 1,
+    "onHand": 3,
+    "uom": "b",
+    "flagged": false,
+    "id": 1
