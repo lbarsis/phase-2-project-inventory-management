@@ -23,6 +23,10 @@
     {
       "category": "New Category 2",
       "id": 6
+    },
+    {
+      "category": "New Category 3",
+      "id": 7
     }
   ],
   "items": [
@@ -45,7 +49,7 @@
       "description": "Standard sheet metal used for doors on wide side.",
       "status": "In Stock",
       "flagAmount": 10,
-      "onHand": 11,
+      "onHand": 15,
       "uom": "EA",
       "flagged": false,
       "id": 2
@@ -97,6 +101,18 @@
       "uom": "LF",
       "flagged": false,
       "id": 6
+    },
+    {
+      "category": "Locksets",
+      "name": "New Name",
+      "vendor": "New Vendor",
+      "description": "Description",
+      "status": "Status",
+      "flagAmount": 10,
+      "onHand": 15,
+      "uom": "EA",
+      "flagged": false,
+      "id": 7
     }
   ]
 }

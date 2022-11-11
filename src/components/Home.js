@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
   return (
     <div>
-      <h1 className="header">Home Page</h1>
+      <h1 className="header">Home Page Hello</h1>
       <div className="instructions-container">
         <h2 className="subheader">Instructions: </h2>
         <p>This application was designed to manage custom inventory items.
