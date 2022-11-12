@@ -1,16 +1,20 @@
 {
   "categories": [
     {
+      "category": "Bracket",
+      "id": 1
+    },
+    {
       "category": "Seal",
+      "id": 2
+    },
+    {
+      "category": "Lockset",
+      "id": 3
+    },
+    {
+      "category": "Sheet Metal",
       "id": 4
-    },
-    {
-      "category": "Bracket",
-      "id": 5
-    },
-    {
-      "category": "Bracket",
-      "id": 6
     }
   ],
   "items": [
@@ -73,18 +77,6 @@
       "uom": "EA",
       "flagged": false,
       "id": 5
-    },
-    {
-      "category": "New Category 2",
-      "name": "NC-3 Neoprene",
-      "vendor": "Seal Vendor",
-      "description": "Standard Seal for acoustic doors and frames",
-      "status": "In Stock",
-      "flagAmount": 1000,
-      "onHand": 2500,
-      "uom": "LF",
-      "flagged": false,
-      "id": 6
     },
     {
       "category": "Locksets",

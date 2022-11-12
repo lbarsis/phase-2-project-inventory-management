@@ -40,6 +40,10 @@ function App() {
       .then(categories => setCategories(categories))
   }, [])
 
+  function handleNewCategory(newCategory) {
+    const displayCategories = [...categories, newCategory]
+    setCategories(displayCategories)
+  }
 
   function deleteCategory(deletedCategory) {
     const displayCategories = categories.filter(category => category.id !== deletedCategory.id)
@@ -67,6 +71,8 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ category: formData.newCategory })
       })
+      .then(r => r.json())
+      .then(newCategory => handleNewCategory(newCategory))
     }
 
     fetch('http://localhost:3003/items', {
@@ -202,7 +208,7 @@ function App() {
           onDeleteItem={handleDeleteItem}
           onSortItems={sortItems}
         />} />
-        <Route path='/categories' element={<Categories categories={categories} onDeleteCategory={deleteCategory}/>} />
+        <Route path='/categories' element={<Categories categories={categories} onDeleteCategory={deleteCategory} onNewCategory={handleNewCategory}/>} />
       </Routes>
 
     </>

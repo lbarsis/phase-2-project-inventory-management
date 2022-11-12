@@ -51,7 +51,12 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 90%;
-  margin: 0px auto 10px auto ;
+  margin: 15px auto 10px auto ;
+}
+
+.category-table {
+  max-width: 50%;
+  text-align: center;
 }
 
 .table-data, .table-header {
@@ -107,16 +112,20 @@ table {
   border-radius: 4px;
   cursor: pointer;
   font-family: sans-serif;
-  
 }
+
 .category-delete {
-  width: 25%;
-  display: inline-block;
-  justify-items: center;
+  width: 100px;
 }
 
 .button:hover {
   background-color: #9c1d1f;
+}
+
+.category-add:hover {
+  width: 25%;
+  display: inline-block;
+  background: rgb(0, 97, 0);
 }
 
 .button:disabled {

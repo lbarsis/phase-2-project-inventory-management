@@ -1,23 +1,28 @@
 import React from 'react';
+import AddCategoryForm from './AddCategoryForm';
 import CategoryItem from './CategoryItem';
 
-function CategoriesList({ categories, onDeleteCategory }) {
+function CategoriesList({ categories, onDeleteCategory, onNewCategory }) {
 
   const displayCategories = categories.map(category => {
-    return <CategoryItem key={category.id} category={category} onDeleteCategory={onDeleteCategory}/>
+    return <CategoryItem key={category.id} category={category} onDeleteCategory={onDeleteCategory} />
   })
 
   return (
-    <table>
-      <tbody>
-        <tr>
-          <th className="table-header">
-            Category
-          </th>
-        </tr>
-        {displayCategories}
-      </tbody>
-    </table>
+    <>
+      <AddCategoryForm onNewCategory={onNewCategory}/>
+      <table className='category-table'>
+        <tbody>
+          <tr>
+            <th className="table-header">
+              Category
+            </th>
+          </tr>
+          {displayCategories}
+        </tbody>
+      </table>
+    </>
+
   )
 }
 
