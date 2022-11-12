@@ -1,49 +1,29 @@
 {
   "categories": [
     {
-      "id": 1,
-      "category": "Bracket"
-    },
-    {
-      "category": "Sheet Metal",
-      "id": 2
-    },
-    {
-      "category": "Locksets",
-      "id": 3
-    },
-    {
       "category": "Seal",
       "id": 4
     },
     {
-      "category": "New Category",
+      "category": "Bracket",
       "id": 5
     },
     {
-      "category": "New Category 2",
+      "category": "Bracket",
       "id": 6
-    },
-    {
-      "category": "New Category 3",
-      "id": 7
-    },
-    {
-      "category": "The Newest of New Categories",
-      "id": 8
     }
   ],
   "items": [
     {
-      "category": "Bracket",
+      "category": "Sheet Metal",
       "name": "343Z Bracket",
       "vendor": "KSP",
       "description": "Standard bracket for mounting rim strikes and closers.",
       "status": "In Stock",
       "flagAmount": 15,
-      "onHand": 10,
+      "onHand": 25,
       "uom": "EA",
-      "flagged": true,
+      "flagged": false,
       "id": 1
     },
     {
@@ -117,6 +97,18 @@
       "uom": "EA",
       "flagged": false,
       "id": 7
+    },
+    {
+      "category": "Seal",
+      "name": "banana",
+      "vendor": "fadfd",
+      "description": "afdadfff",
+      "status": "In Stock",
+      "flagAmount": 15,
+      "onHand": 10,
+      "uom": "EA",
+      "flagged": true,
+      "id": 8
     }
   ]
 }

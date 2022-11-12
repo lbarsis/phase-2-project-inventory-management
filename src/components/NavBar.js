@@ -27,6 +27,12 @@ function NavBar({ search, setSearch, categoryFilter, setCategoryFilter, categori
     >
       On Order
     </NavLink>
+    <NavLink
+      to="/categories"
+      className='navlink'
+    >
+      Categories
+    </NavLink>
     <input
       className="navbar-input"
       type="text"

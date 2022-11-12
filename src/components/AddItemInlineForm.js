@@ -2,7 +2,6 @@ import React from 'react';
 
 function AddItemInlineForm({ formData, onChange, categories, submitItem, handleAddItem }) {
   return (
-    <form>
     <tr>
       <td></td>
       <td className="table-data">
@@ -102,7 +101,6 @@ function AddItemInlineForm({ formData, onChange, categories, submitItem, handleA
         </form>
       </td>
     </tr>
-    </form>
   );
 }
 

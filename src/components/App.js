@@ -5,14 +5,14 @@ import AddItem from './AddItem';
 import OnOrder from './OnOrder';
 import Inventory from './Inventory';
 import Home from './Home';
-import inventory from '../db.json';
 import React, { useEffect, useState } from 'react';
+import Categories from './Categories';
 
 function App() {
-  const { categories, items } = inventory
-  const [inventoryItems, setInventoryItems] = useState(items)
+  const [inventoryItems, setInventoryItems] = useState([])
   const [search, setSearch] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('all')
+  const [categories, setCategories] = useState([])
 
   const [formData, setFormData] = useState({
     category: 'Bracket',
@@ -33,6 +33,18 @@ function App() {
       .then(items => setInventoryItems(items))
   },
     [])
+
+  useEffect(() => {
+    fetch('http://localhost:3003/categories')
+      .then(r => r.json())
+      .then(categories => setCategories(categories))
+  }, [])
+
+
+  function deleteCategory(deletedCategory) {
+    const displayCategories = categories.filter(category => category.id !== deletedCategory.id)
+    setCategories(displayCategories)
+    }
 
   function submitItem(e) {
     e.preventDefault()
@@ -188,8 +200,11 @@ function App() {
           onEditItem={handleUpdateItem}
           categories={displayCategories}
           onDeleteItem={handleDeleteItem}
-          onSortItems={sortItems} />} />
+          onSortItems={sortItems}
+        />} />
+        <Route path='/categories' element={<Categories categories={categories} onDeleteCategory={deleteCategory}/>} />
       </Routes>
+
     </>
   );
 }

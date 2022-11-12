@@ -109,6 +109,11 @@ table {
   font-family: sans-serif;
   
 }
+.category-delete {
+  width: 25%;
+  display: inline-block;
+  justify-items: center;
+}
 
 .button:hover {
   background-color: #9c1d1f;
