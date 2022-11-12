@@ -1,7 +1,8 @@
 import React from "react";
 import InventoryTable from "./InventoryTable";
 
-function Inventory({ items, categories, onNewItem, onDeleteItem, onEditItem, searchedItems, onSortItems }) {
+function Inventory({ items, categories, onNewItem, onDeleteItem, onEditItem, searchedItems,
+  onSortItems, formData, onChange, submitItem }) {
 
   return (
     <div>
@@ -14,6 +15,9 @@ function Inventory({ items, categories, onNewItem, onDeleteItem, onEditItem, sea
         onEditItem={onEditItem}
         searchedItems={searchedItems}
         onSortItems={onSortItems}
+        formData={formData}
+        onChange={onChange}
+        submitItem={submitItem}
       />
     </div>
   )

@@ -27,6 +27,10 @@
     {
       "category": "New Category 3",
       "id": 7
+    },
+    {
+      "category": "The Newest of New Categories",
+      "id": 8
     }
   ],
   "items": [

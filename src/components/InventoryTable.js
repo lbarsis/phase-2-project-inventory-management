@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import InventoryItem from "./InventoryItem";
 
-function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortItems }) {
+function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortItems, onNewItem,
+   formData, onChange, submitItem}) {
   const [itemIndex, setItemIndex] = useState([0, 4])
 
   function handlePage(e) {
@@ -12,24 +13,31 @@ function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortIte
       setItemIndex(itemIndex => [itemIndex[0] + 5, itemIndex[1] + 5])
       previousPage.disabled = false
       if (itemIndex[1] + 5 >= items.length) {
-       return nextPage.disabled = true
-      } 
+        return nextPage.disabled = true
+      }
 
     } else if (e.target.textContent === 'Previous Page') {
       setItemIndex(itemIndex => [itemIndex[0] - 5, itemIndex[1] - 5])
       nextPage.disabled = false
-      if (itemIndex[0]- 5 <= 0) {
+      if (itemIndex[0] - 5 <= 0) {
         return previousPage.disabled = true
       }
     }
   }
 
-  
-
   const displayItems = items.filter(item => (items.indexOf(item) >= itemIndex[0]) && (items.indexOf(item) <= itemIndex[1]))
     .map(item => {
       return (
-        <InventoryItem key={item.id} item={item} onDeleteItem={onDeleteItem} categories={categories} onEditItem={onEditItem} />
+        <InventoryItem key={item.id}
+          item={item}
+          onDeleteItem={onDeleteItem}
+          categories={categories}
+          onEditItem={onEditItem}
+          onNewItem={onNewItem}
+          formData={formData}
+          onChange={onChange}
+          submitItem={submitItem}         
+        />
       )
     })
 
@@ -39,7 +47,6 @@ function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortIte
         <tbody>
           <tr>
             <th>
-              <button className="add-item-button"></button>
             </th>
             <th className="table-header">
               Category

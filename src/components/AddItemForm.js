@@ -1,74 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-function AddItemForm({ onNewItem, categories }) {
-  const [formData, setFormData] = useState({
-    category: 'Bracket',
-    newCategory: '',
-    name: '',
-    vendor: '',
-    description: '',
-    status: '',
-    flagAmount: 0,
-    onHand: 0,
-    uom: '',
-    flagged: false
-  })
-
-  function handleChange(e) {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  function submitItem(e) {
-    e.preventDefault()
-
-    const newFormItem = {
-      category: formData.category === 'other' ? formData.newCategory : formData.category,
-      name: formData.name,
-      vendor: formData.vendor,
-      description: formData.description,
-      status: formData.status,
-      flagAmount: parseInt(formData.flagAmount),
-      onHand: parseInt(formData.onHand),
-      uom: formData.uom,
-      flagged: parseInt(formData.onHand) <= parseInt(formData.flagAmount) ? true : false
-    }
-
-    if (formData.category === 'other') {
-      fetch('http://localhost:3003/categories', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ category: formData.newCategory })
-      })
-    }
-
-    fetch('http://localhost:3003/items', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newFormItem)
-    })
-      .then(r => r.json())
-      .then(newItem => onNewItem(newItem))
-
-
-    setFormData({
-      category: 'Bracket',
-      newCategory: '',
-      name: '',
-      vendor: '',
-      description: '',
-      status: '',
-      flagAmount: 0,
-      onHand: 0,
-      uom: '',
-      flagged: false
-    })
-  }
-
+function AddItemForm({ categories, formData, onChange, submitItem }) {
   return (
     <form className="item-form" onSubmit={submitItem}>
       <label htmlFor="category">Category:</label><br />
@@ -79,14 +11,14 @@ function AddItemForm({ onNewItem, categories }) {
           id="newCategory"
           name="newCategory"
           value={formData.newCategory}
-          onChange={handleChange}
+          onChange={onChange}
         />
       ) : (
         <select className="form-input" type="text"
           id="category"
           name="category"
           value={formData.category}
-          onChange={handleChange}
+          onChange={onChange}
         >
           {categories}
           <option value='other'>Other</option>
@@ -100,7 +32,7 @@ function AddItemForm({ onNewItem, categories }) {
         id="name"
         name="name"
         value={formData.name}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <br />
       <label htmlFor="vendor">Vendor:</label><br />
@@ -110,7 +42,7 @@ function AddItemForm({ onNewItem, categories }) {
         id="vendor"
         name="vendor"
         value={formData.vendor}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <br />
       <label htmlFor="description">Description:</label> <br />
@@ -120,7 +52,7 @@ function AddItemForm({ onNewItem, categories }) {
         id="description"
         name="description"
         value={formData.description}
-        onChange={handleChange} /> <br />
+        onChange={onChange} /> <br />
       <label htmlFor="status">Status:</label><br />
       <input
         className="form-input"
@@ -128,7 +60,7 @@ function AddItemForm({ onNewItem, categories }) {
         id="status"
         name="status"
         value={formData.status}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <br />
       <label htmlFor="flagAmount">Flag Amount:</label> <br />
@@ -138,7 +70,7 @@ function AddItemForm({ onNewItem, categories }) {
         id="flagAmount"
         name="flagAmount"
         value={formData.flagAmount}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <br />
       <label htmlFor="onHand">Quantity on Hand:</label> <br />
@@ -148,7 +80,7 @@ function AddItemForm({ onNewItem, categories }) {
         id="onHand"
         name="onHand"
         value={formData.onHand}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <br />
       <label htmlFor="uom">Unit of Measure:</label><br />
@@ -158,7 +90,7 @@ function AddItemForm({ onNewItem, categories }) {
         id="uom"
         name="uom"
         value={formData.uom}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <br />
       <input className="button" type="submit" />

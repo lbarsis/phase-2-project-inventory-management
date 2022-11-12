@@ -14,12 +14,74 @@ function App() {
   const [search, setSearch] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('all')
 
+  const [formData, setFormData] = useState({
+    category: 'Bracket',
+    newCategory: '',
+    name: '',
+    vendor: '',
+    description: '',
+    status: '',
+    flagAmount: 0,
+    onHand: 0,
+    uom: '',
+    flagged: false
+  })
+
   useEffect(() => {
     fetch('http://localhost:3003/items')
       .then(r => r.json())
       .then(items => setInventoryItems(items))
   },
     [])
+
+  function submitItem(e) {
+    e.preventDefault()
+
+    const newFormItem = {
+      category: formData.category === 'other' ? formData.newCategory : formData.category,
+      name: formData.name,
+      vendor: formData.vendor,
+      description: formData.description,
+      status: formData.status,
+      flagAmount: parseInt(formData.flagAmount),
+      onHand: parseInt(formData.onHand),
+      uom: formData.uom,
+      flagged: parseInt(formData.onHand) <= parseInt(formData.flagAmount) ? true : false
+    }
+
+    if (formData.category === 'other') {
+      fetch('http://localhost:3003/categories', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ category: formData.newCategory })
+      })
+    }
+
+    fetch('http://localhost:3003/items', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newFormItem)
+    })
+      .then(r => r.json())
+      .then(newItem => handleAddNewItem(newItem))
+
+    setFormData({
+      category: 'Bracket',
+      newCategory: '',
+      name: '',
+      vendor: '',
+      description: '',
+      status: '',
+      flagAmount: 0,
+      onHand: 0,
+      uom: '',
+      flagged: false
+    })
+
+
+  }
 
   function handleAddNewItem(newItem) {
     setInventoryItems([
@@ -46,6 +108,13 @@ function App() {
     }
   })
 
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
   const searchedItems = filteredItems.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
 
   const displayCategories = categories.map(category => {
@@ -69,11 +138,11 @@ function App() {
         if (sortA < sortB) {
           return -1;
         }
-        
+
         if (sortA > sortB) {
           return 1;
         }
-        
+
         return 0;
       })
       setInventoryItems(displayItems)
@@ -102,9 +171,17 @@ function App() {
             categories={displayCategories}
             onDeleteItem={handleDeleteItem}
             onSortItems={sortItems}
+            formData={formData}
+            onChange={handleChange}
+            submitItem={submitItem}
           />}
         />
-        <Route path='/add-item' element={<AddItem onNewItem={handleAddNewItem} categories={displayCategories} />} />
+        <Route path='/add-item' element={<AddItem
+          categories={displayCategories}
+          formData={formData}
+          onChange={handleChange}
+          submitItem={submitItem}
+        />} />
         <Route path='/on-order' element={<OnOrder
           items={searchedItems}
           onNewItem={handleAddNewItem}

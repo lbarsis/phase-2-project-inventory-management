@@ -81,6 +81,7 @@ table {
   border: none;
   width: 25px;
   padding: 25px;
+  text-decoration: none;
 }
 
 .add-item-button:hover {
