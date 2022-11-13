@@ -25,9 +25,9 @@
       "description": "Standard bracket for mounting rim strikes and closers.",
       "status": "In Stock",
       "flagAmount": 15,
-      "onHand": 25,
+      "onHand": 10,
       "uom": "EA",
-      "flagged": false,
+      "flagged": true,
       "id": 1
     },
     {
