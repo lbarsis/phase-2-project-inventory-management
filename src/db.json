@@ -31,9 +31,9 @@
       "name": "343Z Bracket",
       "vendor": "KSP",
       "description": "Standard bracket for mounting rim strikes and closers.",
-      "status": "In Stock",
+      "status": "Order Needed",
       "flagAmount": 15,
-      "onHand": 10,
+      "onHand": 13,
       "uom": "EA",
       "flagged": true,
       "id": 1
@@ -43,11 +43,11 @@
       "name": "16GA CRS  96\" x 48\"",
       "vendor": "Sheet Metal Vendor",
       "description": "Standard sheet metal used for doors on wide side.",
-      "status": "In Stock",
+      "status": "Order this",
       "flagAmount": 10,
-      "onHand": 11,
+      "onHand": 10,
       "uom": "EA",
-      "flagged": false,
+      "flagged": true,
       "id": 2
     },
     {
@@ -57,9 +57,9 @@
       "description": "Government 2890C Life Safety Device for SCIF Applications",
       "status": "On Order",
       "flagAmount": 15,
-      "onHand": 25,
+      "onHand": 10,
       "uom": "EA",
-      "flagged": false,
+      "flagged": true,
       "id": 3
     },
     {
@@ -69,9 +69,9 @@
       "description": "2890C Life Safety Lock",
       "status": "Out of Stock",
       "flagAmount": 10,
-      "onHand": 0,
+      "onHand": 11,
       "uom": "EA",
-      "flagged": true,
+      "flagged": false,
       "id": 4
     },
     {
