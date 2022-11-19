@@ -12,19 +12,17 @@ function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortIte
       setItemIndex(itemIndex => [itemIndex[0] + 5, itemIndex[1] + 5])
       previousPage.disabled = false
       if (itemIndex[1] + 5 >= items.length) {
-       return nextPage.disabled = true
-      } 
+        return nextPage.disabled = true
+      }
 
     } else if (e.target.textContent === 'Previous Page') {
       setItemIndex(itemIndex => [itemIndex[0] - 5, itemIndex[1] - 5])
       nextPage.disabled = false
-      if (itemIndex[0]- 5 <= 0) {
+      if (itemIndex[0] - 5 <= 0) {
         return previousPage.disabled = true
       }
     }
   }
-
-  
 
   const displayItems = items.filter(item => (items.indexOf(item) >= itemIndex[0]) && (items.indexOf(item) <= itemIndex[1]))
     .map(item => {
@@ -82,9 +80,7 @@ function InventoryTable({ items, categories, onDeleteItem, onEditItem, onSortIte
         <button className="button" id="next-page" onClick={handlePage}>Next Page</button>
       </div>
     </>
-
   )
-
 }
 
 export default InventoryTable;
